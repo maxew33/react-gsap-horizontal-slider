@@ -7,15 +7,58 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.banner{
+h1 {
+  cursor: pointer;
+}
+
+.banner {
   position: fixed;
   width: 100vw;
   height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: hsl(0, 0%, 0%, .6);
+  background: rgba(0, 0, 0, 0.6);
   font-size: 6rem;
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+}
+
+.nav-items {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bolder;
+  z-index: 10;
+}
+.arrow[data-direction=left] {
+  left: 12px;
+}
+.arrow[data-direction=right] {
+  right: 12px;
+}
+
+.slide-container {
+  width: 400vw;
+  display: flex;
 }
 
 .slide-wrapper {
@@ -29,13 +72,17 @@
 }
 .slide-wrapper:nth-of-type(1) {
   background: #ff8000;
+  left: 0vw;
 }
 .slide-wrapper:nth-of-type(2) {
   background: yellow;
+  left: 100vw;
 }
 .slide-wrapper:nth-of-type(3) {
   background: #80ff00;
+  left: 200vw;
 }
 .slide-wrapper:nth-of-type(4) {
   background: lime;
+  left: 300vw;
 }/*# sourceMappingURL=App.css.map */
